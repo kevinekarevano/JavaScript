@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Genertor</title>
+</head>
+<body>
+    <script>
+
+        function* createNames () {
+            yield "Kevin";
+            yield "Ekarevano";
+            yield "JS";
+        }
+
+        const names = createNames()
+        for (const name of names){
+            console.info(name)
+        }
+
+        // Contoh lain
+         // Function Generator bersifat LAZY
+        function* ganjilGenerator (value) {
+            for (let i =  1; i <= value; i++){
+                if (i % 2 === 1){
+                    yield i
+                }
+            }
+        }
+
+        const numbers = ganjilGenerator(100)
+        for (const number of numbers) {
+            console.info(number)
+        }
+    </script>
+</body>
+</html>

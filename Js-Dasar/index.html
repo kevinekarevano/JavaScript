@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.writeln('<h1>HALLO DEK</h1>')
+        document.writeln('‼️✅❌🏀❤️')
+        
+        // DATA NUMBER
+        document.writeln(100.12)
+        document.writeln("</br>")
+        document.writeln(111)
+        document.writeln("</br>")
+        // BINARY NUMBER
+        document.writeln(0b11110011001)
+
+        document.writeln('</br>')
+        // string pakai plus
+        document.writeln('Nama: ' + 'kevin ekarevano ' + 'front end developer')
+
+        // tipe yang lain
+        document.writeln('</br>')
+        document.writeln('<textarea>')
+        document.write('halloges \n kevin \ndisini')
+        document.write('kevin\\  \\javascript\n')
+        document.write('\"website belajar js\"\n')
+        document.write('\"website belajar js\"')
+        document.writeln('</textarea>')
+
+        // VARIABEL VAR
+        document.writeln('</br>')
+
+        var namaLengkap = 'kevin'
+        
+
+        namaLengkap = 'kevin ekaravano'
+        namaLengkap = 'quincy'
+        namaLengkap = 'front end amin'
+
+        document.write(namaLengkap)
+
+        document.write('</br>')
+
+        // VARIABEL LET
+        let namaGw = 'kevin'
+
+        namaGw = 'kevin aja'
+        namaGw = 'quincy'
+        
+
+        document.write(namaGw)
+
+        document.write('</br>')
+        document.write('</br>')
+
+        // VARIABEL CONST
+        const namaSAplikasi = 'Kevin.JS'
+
+       
+        document.writeln(namaSAplikasi)
+        
+        document.write('</br>')
+
+        // OPERATOR MATEMATIKA
+
+        let hasil = 1 + 3
+
+        document.writeln('<p>hasil dari 2 + 2 = ' + hasil + '</p>')
+
+        hasil = hasil - 1 
+        document.writeln('<p>hasil dari 2 + 2 = ' + hasil + '</p>')
+
+        hasil = hasil * 6
+        document.writeln('<p>hasil dari 2 + 2 = ' + hasil + '</p>')
+
+        hasil *= 8
+        document.writeln('<p>hasil dari 2 + 2 = ' + hasil + '</p>')
+        
+        document.write('</br>')
+
+        // OPERATOR UNARY
+
+        let angka = +1
+        document.writeln(angka)
+
+        angka++
+        document.writeln(angka)
+
+        angka--
+        document.writeln(angka)
+
+        angka = -angka
+        document.writeln(angka)
+
+        angka = 
+        document.writeln(angka)
+
+        document.write('</br>')
+
+        // OPERATOR PERBANDINGAN
+
+        let result = 5 == '5'
+        document.writeln('<p>' + result + '</p>')
+
+        result = 5 === '5'
+        document.writeln('<p>' + result + '</p>')
+        
+        result = 5 > 10
+        document.writeln('<p>' + result + '</p>')
+
+        result = 5 < 10
+        document.writeln('<p>' + result + '</p>')
+
+        document.write('</br>')
+
+        // OPERATOR LOGIKA
+
+        const nilaiUjian = 70
+        const nilaiAbsensi = 70
+
+        const lulusUjian = nilaiUjian > 75
+        const lulusAbsensi = nilaiAbsensi > 75
+
+        const lulus = lulusUjian && lulusAbsensi
+        document.writeln(lulus)
+
+        document.write('</>')
+
+        // CONSOLE LOG
+        console.debug('debug')
+        console.log('hello ges david disini')
+        console.info('hello world')
+        console.warn('ini warning')
+        console.error('ini error')
+
+        let konsol = 'ini konsol'
+
+        console.error(konsol)
+        console.log(konsol)
+        
+        document.write('</br>')
+        // STRING TAMPLATE
+
+        const tamplate = "Kevin Ekarevano"
+        const name = `Nama : ${tamplate}`
+        const firstName = "Lebron"
+        const lastName = "James"
+
+        console.log(name)
+        console.log(`Nama : ${firstName} ${lastName}`)
+        
+
+        const nilaiujian = 80
+        const kelulusan = `Nama : ${tamplate} , lulus : ${nilaiujian > 70}`
+
+        console.log(kelulusan)
+
+        // MULTILINE
+        const multiLine = `Nama saya Kevin,
+        umur saya 16,
+        ingin menjadi front end dev, 
+        ahaahahahhaahha`
+
+        document.writeln("<pre>")
+        document.writeln(multiLine)
+        document.writeln("</pre>")
+
+        document.writeln("</br>")
+        
+        // KONVERSI STRING
+
+        const value1 = parseInt("1")
+        const value2 = 2
+        const sum = value1 + value2
+
+        document.writeln(sum)
+
+        document.writeln(`<p> ${parseInt("2.3")} </p>`)
+        document.writeln(`<p> ${parseFloat("2.3")} </p>`)
+        document.writeln(`<p> ${Number("2.3")} </p>`)
+
+        // NaN Not a number
+
+        document.writeln(`<p> ${parseInt("ww2.3")} </p>`)
+        document.writeln(`<p> ${parseFloat("2.3aka")} </p>`)
+        document.writeln(`<p> ${Number("2.3a")} </p>`)
+
+        const pertama = Number("bukan angka")
+        const kedua = 20
+        const jjumlah = pertama + kedua
+
+        document.writeln(`<p> ${jjumlah}`)
+        document.writeln(`<p> ${pertama}`)
+
+        // CARA CEK NaN
+        document.writeln(`<p> ${isNaN(pertama)}`)
+
+        // DATA Array
+
+        let arrayKosong = []
+
+        let arrayNama = ["Kevin", "lebron", "curry"]
+        
+
+        // MENAMBAHKAN DATA Array & mengurangi
+
+        let pemainNBA = []
+        pemainNBA.push("Lebron", "Curry", "KevinDurant")
+        pemainNBA.push("Kevin Irving")
+        pemainNBA.push(4)
+
+        console.table(pemainNBA)
+
+        
+
+        console.info(pemainNBA[0])
+        console.info(pemainNBA[4])
+        console.info(pemainNBA[2])
+
+        pemainNBA[0] = "harden"
+        pemainNBA[3] = "wemby"
+
+        
+        console.table(pemainNBA)
+        
+        delete pemainNBA[3]
+
+        console.table(pemainNBA)
+
+        pemainNBA[3] = "wembanyama"
+
+        console.table(pemainNBA)
+
+        // OBJECT / PROPERTY
+
+        const orangHitam = {
+            "makanan fav" : "kebab",
+             "rank" : "radiant",
+        }
+
+        orangHitam["Nama"] = "Farhan Kebab"
+        orangHitam["Alamat"] = "Banten"
+        orangHitam["Umur"] = "1945"
+
+        console.table(orangHitam)
+        
+        delete orangHitam["Alamat"]
+        
+        console.table(orangHitam)
+
+        document.write(`Rank Player : ${orangHitam.rank}`)
+       
+        document.write(`<p>Makanan Favorite : ${orangHitam["makanan fav"]}`)
+        
+        document.write(`<p>Umur Beliau : ${orangHitam.Umur}`)
+
+       
+
+        // IF EXPRESIONS
+                
+
+
+
+    </script>
+
+    
+</body>
+</html>

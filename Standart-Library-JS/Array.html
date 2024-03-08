@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+
+        {
+            // Array Loop
+            const iniArray = ["Kevin", "Giannis", "KD"]
+            // pada "forEach" parameter pertama mengakses elemen, dan parameter kedua mengakses index
+            iniArray.forEach(function (value, index) { // jika memakai anonymous function "function tanpa nama"
+                console.info(`${value} : ${index}`)
+            })
+
+            // Jika memakai arrow function, lebih simple
+            iniArray.forEach((value, index) => console.info(`${value} : ${index}`) ) 
+
+            // Jika parameter hanya satu di arrow function, maka tidak usah pakai ()
+            iniArray.forEach(value => console.info(value))
+
+
+        }
+
+
+        {
+            // Array Queue / antrian
+            const antrianQueue = []
+            // seperti sistem antrian
+            antrianQueue.push("Kevin") // menambakan data ke paling belakang
+            antrianQueue.push("kevin2")
+            antrianQueue.push("Kevin3")
+
+            console.table(antrianQueue)
+
+            console.log(antrianQueue.shift()) // megambil data dan menghapus data paling depan
+            console.log(antrianQueue.shift())
+            console.log(antrianQueue.shift())
+            console.log(antrianQueue.shift())
+
+            
+        }
+
+    </script>
+</body>
+</html>

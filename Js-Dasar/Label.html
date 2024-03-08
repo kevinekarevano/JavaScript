@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Jika i < 10 maka akan true, dan akan melakukan pengulangan yang dibawah yaitu pengulangan j. Jika J kurng dari 100 dia akan melakukan pengulangan, tetapi di cek dulu oleh if, jiak dia sudah melakukan pengulangan dan j > 10, maka akan di continue ke pengulangan pertama, tetapi dia akan membaca post statement pengulangan i terlebih dahulu.
+
+        loopi:
+            for (let i = 0; i < 10; i++) {
+                loopj:
+                for (let j = 0; j < 100; j++) {
+
+                    if (j > 10) {
+                        continue loopi
+                    }
+
+                    console.info(`${i} - ${j}`)
+                }
+            }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator In</title>
+</head>
+<body>
+    <script>
+
+        // OPERARTOR in hanya mengecek object nya saja, tidak bisa mengecek properti nya atau isinya
+        const bioData = {
+            "Nama" : "Farhan Kebab",
+            "Alamat" : "Korut",
+            "Umur" : "1945"
+        }
+
+        document.writeln("Alamat" in bioData) //True Karena Alamat ada di variabel
+        document.writeln("Umur" in bioData) // True karena Umur ada di variabel
+        document.writeln("Pekerjaan" in bioData) //False karena pekerjaan tidak ada di variabel
+
+
+        const data = [null, 10, "kevin"]
+
+        document.writeln("</br>")
+
+        document.writeln(0 in data) //Hasilnya TRUE walaupun isi datanya Null.
+        
+    </script>
+</body>
+</html>

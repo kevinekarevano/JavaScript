@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Kita bisa membuat function di dalam function yang disebut "Inner Function"
+
+        function outer () {
+
+            function inner () {
+                document.writeln("TEST")
+            }
+
+            inner()
+        }
+    
+
+        outer() // jika dipanggil diluar outter tidak error
+        inner() // jika inner di panggil di outter maka akan error
+
+    </script>
+</body>
+</html>

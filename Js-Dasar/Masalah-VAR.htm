@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masalah Var</title>
+</head>
+<body>
+    <script>
+        //Jika Pakai Let, akan terikat dengan scope
+        let i = 100
+
+        for (let i = 0; i <=10; i++) {
+            console.log(`Local ${i}`)
+        }
+
+        console.log(`Global ${i}`)
+
+        //Jika pakai Var, dia akan ikut kerubah oleh ke local scope, kan dia global scope
+
+        var x = 50
+
+        for (var x = 0; x <= 10; x++) {
+            document.writeln(`<P>local ${x}`)
+        }
+
+        document.writeln(`<p>Global ${x}`)
+    </script>
+</body>
+</html>

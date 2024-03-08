@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Anonymous</title>
+</head>
+<body>
+    <script>
+
+        // Anonymous function adalah "Function Tanpa Nama". Ada dua cara utuk membuatnya
+
+        // Dengan Variabel
+        let say = function (name) {
+            document.writeln(`<p> Wssup ${name}`)
+        }
+
+        say("Kevin")
+
+
+        // Dimasukkan ke dalam parameter Function
+        function giveMeName (callback) {
+            callback("CURRY")
+        }
+
+        giveMeName(function (name) {
+            document.writeln(`<p>Hallo ${name}`)
+        })
+
+        
+
+    </script>
+</body>
+</html>

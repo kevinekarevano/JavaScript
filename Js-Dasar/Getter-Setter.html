@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter dan Setter</title>
+</head>
+<body>
+    <script>
+         // contoh 1
+        const person = {
+            firstName : "Kevin",
+            lastName : "James",
+            fullName : "Kevin James"
+        }
+
+        person.firstName = ("Budi")
+        person.fullName = person.firstName + " " + person.lastName
+
+        console.table(person)
+
+        // Contoh 2
+        const person1 = {
+            firstName : "Letda",
+            lastName : "James",
+            fullName : function () {
+                return `${this.firstName} ${this.lastName}`
+            }
+
+        }
+        person1.firstName = "cepcil"
+        console.log(person1.fullName())
+
+        //  PAKAI GETTER & SETTER
+
+        const person3 = {
+            firstName : "Letda",
+            lastName : "James",
+            get fullName () {
+                return `${this.firstName} ${this.lastName}`
+            },
+            set fullName(value) {
+                const array = value.split(" ")
+                this.firstName = array [0]
+                this.lastName = array [1]
+            }
+
+        }
+
+        person3.fullName = "Kevin Ekarevano"
+        console.table(person3)
+
+        person3.fullName = "Budi 01"
+        console.table(person3)
+
+    </script>
+</body>
+</html>

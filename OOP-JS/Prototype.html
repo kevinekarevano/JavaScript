@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <script>
+
+
+        function Contoh (firstName, lastName) { 
+            this.firstName = firstName
+            this.lastName = lastName
+        
+        }
+
+        Contoh.prototype.sayBye = function () { // Menambahkan Prototype ke Construction
+            console.log("Good Bye")
+        }
+
+        Contoh.prototype.sayRun = function () {
+            console.log(`${this.firstName} is running`)
+        }
+
+        const irving = new Contoh("Kyrie", "Irving")
+        irving.sayRun = function () {
+            console.log(`${this.firstName} sedang berlari`) // jika saya menambakan ini, dia akan mencari kesini dulu, bukan ke protoype
+        }
+        
+        
+        const kevin = new Contoh("James", "Harden")
+
+        console.log(irving)
+        console.log(kevin)
+
+        kevin.sayBye() // Memanggil Prototype
+        irving.sayRun()
+        
+
+    </script>
+</body>
+</html>

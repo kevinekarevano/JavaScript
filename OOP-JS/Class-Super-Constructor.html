@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Super Constructor</title>
+</head>
+<body>
+    <script>
+
+        class  Employee {
+
+            constructor (firstName) { // ini akan diwariskan juga ke class Manager
+                this.firstName = firstName  
+            }
+        
+            sayHello (name){
+                console.log(`Hello ${name}, my name is Employee ${this.firstName}`)
+            }
+        }            
+
+        class Manager extends Employee { // artinya class employee mewariskan prototype nya ke class manager. jadi jika misalkan sayhello dihapuss, dia akan mencari ke prototype milik si employee
+        
+            constructor (firstName, lastName) {
+                super(firstName) // wajib memanggil super constructor
+                this.lastName = lastName
+            }
+
+            sayHello (name){
+                console.log(`Hello ${name}, my name is Manager ${this.firstName} ${this.lastName}`)
+            }
+        }      
+
+        const Curry = new Employee("Curry")
+        Curry.sayHello("Kevin")
+
+        const Kevin = new Manager("Kevin", "ekarevano")
+        Kevin.sayHello("Curry")
+
+        console.log(Curry)
+        console.log(Kevin)
+
+    </script>
+</body>
+</html>

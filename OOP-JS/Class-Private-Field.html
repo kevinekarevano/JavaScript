@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Class Field</title>
+</head>
+<body>
+    <script>
+
+        class Counter {
+            #counter = 0
+
+            menambahkan(){
+                this.#counter++
+            }
+
+            mengurangkan(){
+                this.#counter--
+            }
+
+            get(){
+                return this.#counter
+            }
+        }
+
+        const kevin = new Counter
+        console.log(kevin.#counter = 100) // Akan error karena dia menjadi private, sehingga tidak bisa di akses dari luar
+        // jadi # counter hanay bisa di akses di dalam class tersebut
+
+        kevin.menambahkan()
+        kevin.menambahkan()
+        kevin.menambahkan()
+
+        console.info(kevin)
+    </script>
+</body>
+</html>

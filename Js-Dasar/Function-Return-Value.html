@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Return Value</title>
+</head>
+<body>
+    <script>
+        // Contoh 1
+        function sayHello (firstName, lastName) {
+            const say = `Hello ${firstName} ${lastName}`
+            return say
+        }
+
+        const result = sayHello("Kevin", "Ekarevano")
+
+        const test = sayHello("lebron", 23)
+
+        document.writeln(`<p>${result}`)
+
+        document.writeln(`<p>${test}`)
+
+        
+        // Contoh 2
+        function nilaiUjian (value) {
+            if (value > 90){
+                return "A"
+            } else if (value > 80){
+                return "B"
+            } else if (value > 70){
+                return "C"
+            } else if (value > 60){
+                return "D"
+            } else {
+                return "E"
+            }
+        }
+
+        const getNilai = nilaiUjian(71)
+        document.writeln(`<p>${getNilai}`)
+
+
+        // Contoh 3
+
+        function mencariNilai (array, searchValue) {
+            for (const element of array) {
+                if(element === searchValue){
+                    return true
+                }
+            }
+            return false
+        }
+
+        const array1 = [12,1212,12,2224,2423,121,1,2,3,4,5,7,]
+        const search = 2423
+        const found = mencariNilai(array1, search)
+        document.writeln(`<p>${found}`)
+    </script>
+</body>
+</html>
+
+
+

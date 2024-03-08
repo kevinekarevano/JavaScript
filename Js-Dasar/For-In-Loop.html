@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // For in dapat mengambil data di Array yaitu index nya, dan object yaitu property nya. Bukan Value nyaa!
+
+
+        //For in di object
+
+        const profil = {
+            Nama : "Kevin",
+            Alamat : "Amerika",
+            Umur : 17
+        }
+
+        for (const data in profil) {
+            document.writeln(`<p> ${data} : ${profil[data]}`)
+        }
+
+
+        // For in di Array
+
+        const profilUser = ["Kevin", "Amerika", 19]
+
+        for (const dataIndex in profilUser) {
+            document.writeln(`<p> ${dataIndex} : ${profilUser[dataIndex]}`)
+        }
+    </script>
+</body>
+</html>

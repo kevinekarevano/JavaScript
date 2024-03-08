@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+        // Cara biasa menambil data dari array
+        const dataNama = ["kevin", "James", "kd"]
+        const nama1 = dataNama[0]
+        const nama2 = dataNama[1]
+        const nama3 = dataNama [2]
+        
+        document.writeln(nama1)
+        document.writeln(nama2)
+        document.writeln(nama3)
+
+        // Memakai destructuring 
+
+        const nbaData = ["curry", "tatum", "letda", "frontal", "rasyah"]
+        const [pemain1, pemain2, pemain3, ...other] = nbaData // "...other" akan mengambil data sisa nya dijadikan array lagi
+
+        document.writeln(`<p>${pemain1}`)
+        document.writeln(`<p>${pemain2}`)
+        document.writeln(`<p>${pemain3}`)
+        document.write(`<p>${other}`)
+        console.log(other) // output nya array
+
+
+        // Contoh di Object, jika cara biasa
+
+        const dataDiri = {
+            namaDepan: "Kevin",
+            namaBelakang: "EKarevano",
+            alamat: {
+                jalan: "Jalan - Jalan",
+                kota: "tokyo",
+                negara: "jepang"
+            },
+            pekerjaan: "Software Engineer",
+            web: "kevin.dev"
+        }
+
+        const kotaAsal = dataDiri.alamat.kota
+        const pekerjaan = dataDiri.pekerjaan
+        const web = dataDiri.web
+
+        document.writeln(`<p>${kotaAsal}`)
+        document.writeln(`<p>${pekerjaan}`)
+        document.writeln(`<p>${web}`)
+
+
+        //  Pakai Destructuring
+
+        const bioData = {
+            nama1: "kevin.dev",
+            nama2: "js",
+            address: {
+                street: "Jalan kenangan",
+                city: "tokyo",
+                country: "jepang"
+            },
+            profesi: "Software Engineer",
+            website: "kevin.dev"
+        }
+
+        const {profesi, website, address:{street, city, country}, ...yangLain} = bioData
+        document.writeln(`<p>${profesi}`)
+        document.writeln(`<p>${website}`)
+        document.writeln(`<p>${street}`)
+        document.writeln(`<p>${country}`)
+        document.writeln(`<p>${city}`)
+        document.writeln(`<p>${JSON.stringify(yangLain)}</p>`)
+        console.log(yangLain) // output nya akan berupa object
+
+        // Jika di parameter sebuah function (Jika tida pakai Desturcturing)
+
+        function namaPemain (value) {
+            console.log(pemain.namaDepan)
+            console.log(pemain.namaTengah)
+            console.log(pemain.namaBelakang)
+        }
+
+        const pemain = {
+            namaDepan: "kevin",
+            namaTengah: "Stephen",
+            namaBelakang: "James"
+        }
+
+        namaPemain(pemain)
+
+        
+        // Jika pakai Destructuring
+
+        {
+                    function namaPemain ({namaDepan, namaTengah, namaBelakang}) {
+                        console.log(namaDepan)
+                        console.log(namaTengah)
+                        console.log(namaBelakang)
+                    }
+
+                    const pemain = {
+                        namaDepan: "Virtunix",
+                        namaTengah: "sofware",
+                        namaBelakang: "engineer"
+                    }
+
+                    namaPemain(pemain) // parameter nya diisi object yang mau diambil datanya
+        }
+
+
+        // Jika di array tanpa destructuring
+
+        function sum (array) {
+            return array[0] + array [1]
+        }
+        //jika bingung arraynya darimana?
+        console.log(sum(["kevin","james"])) // array nya dari sini ya, jadi kita input suatu array
+        console.log(sum([10,90]))
+
+
+        {
+                function sum ([first, second, p]) {
+                    return first + second + p
+                }
+                //jika bingung arraynya darimana?
+                console.log(sum(["kevin.","dev",])) // array nya dari sini ya, jadi kita input suatu array
+                console.log(sum([10,100]))
+        }
+
+        // Menambahkan default value pada destructuring
+
+        const contohCuy = ["Kevin", "stephen"] // biasanya default value yaitu "UNDEFINED"
+        const [data1, data2 = "data tidak ada", data3 = "data tidak ada"] = contohCuy
+
+        console.log(data1)
+        console.log(data2)
+        console.log(data3)
+
+        // Contoh di object
+
+        {
+            const namaNba = {
+                pemain1: "lebron",
+                pemain2: "kd",
+                // misalkkan pemain 3 tidak ada
+            }
+
+            const {pemain1, pemain2 = "Tidak ada player", pemain3 = "Tidak ada player"} = namaNba
+
+            console.log(pemain1)
+            console.log(pemain2)
+            console.log(pemain3)
+        }
+
+    </script>
+</body>
+</html>

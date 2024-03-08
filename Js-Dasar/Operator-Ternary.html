@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Ternary</title>
+</head>
+<body>
+    <script>
+    
+    // Versi Pakai IF ELSE
+    const nilaiUjian = 75
+    let ucapan 
+
+    if (nilaiUjian >= 75) {
+        ucapan = "Selamat Anda Lulus Ujian"
+    } else {
+        ucapan = "Silahkan Coba Lagi"
+    }
+
+    document.writeln(`<p> ${ucapan} </p>`)
+
+    // Versi pakai Operator Ternary "?"
+    ucapan = nilaiUjian >= 75 ? "Congrats" : "NT Brok"
+
+    document.writeln(`<p> ${ucapan}`)
+
+    </script>
+</body>
+</html>

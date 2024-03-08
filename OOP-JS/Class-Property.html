@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Property</title>
+</head>
+<body>
+    <script>
+
+            class Person { 
+                constructor (param) { 
+                    console.log(`Nama saya ${param}`)
+                    this.firstName = param // Jika ingin menambahkan properties di class
+                }
+            }
+
+            
+            const kevin = new Person("james")
+            console.info(kevin)
+            console.info(kevin.firstName)
+    </script>
+</body>
+</html>

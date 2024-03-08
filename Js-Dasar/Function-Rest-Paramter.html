@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Rest Parameter, dapat menampung data yang junlah nya lebih dari satu
+
+
+        function sum (name, ...data) {
+            let total = 0
+            for (const item of data) {
+                total += item
+            }
+
+            document.writeln(`<p>Total ${name} ${total}`)
+        }
+
+        sum("apel", 20, 40)
+        sum()
+
+
+    
+        // Misalkan saya terlanjur mempunyai data array, kita bisa memasukkan array yang kita punya ke rest paramter dengan menambahkan "...Array-nya"
+        const dataGw = [10,10,10,10,10]
+
+        sum("apel", ...dataGw)
+
+        
+        
+        // Contoh Lainnya
+
+        function test (...testing) {
+            document.writeln(`<p>${testing}`)
+        }
+
+        test(0,1,2,3,4,5,6,7,)
+
+    </script>
+</body>
+</html>

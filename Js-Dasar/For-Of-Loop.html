@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // For Of dapat mengambil value dalam data bukan index nya. For Of dapat digunakan hanya dalam array, string dll. Tidak bisa digunakan dalam data Object {}
+
+
+        // Contoh dalam data Array []
+        const profil = ["Kevin", "Amerika", 17]
+
+        for (const data of profil) {
+            document.writeln(`<p>${data}`)
+        }
+
+        // Contoh dalam data String ""
+        const i = "Ini String"
+
+        for (const dataString of i  )  {
+            document.writeln(`<p>${dataString}`)
+        }
+
+
+    </script>
+</body>
+</html>

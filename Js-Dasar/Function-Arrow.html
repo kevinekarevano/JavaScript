@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Arrow</title>
+</head>
+<body>
+    <script>
+
+        //Contoh Arrow Function
+        const sayHello = (name) => {
+            console.log(`Hello ${name} `)
+        }
+
+        sayHello("Kevin")
+
+        // Cara lain
+        const sayHello1 = nama => console.log(`Hello ${nama}`) // Jika PARAMTER hanya 1, tidak usah menggunakan tanda kurung "( )"
+
+        sayHello1("James")
+
+
+        // Return di Arrow Function
+
+        const penjumlahan = (first, second) => {  // Cara biasa pakai return
+            return first + second
+        }
+
+        console.log(penjumlahan(5,5))
+
+        // Cara yang lebih simple
+
+        const penjumlahan1 = (angka1, angka2) => angka1 + angka2
+
+        console.log(penjumlahan1(2,3))
+
+
+        //Jika tidak menggunakan Parameter Wajib menggunakan kurung
+
+        const noParameter = () => {
+            document.writeln("Hello World")             // Contoh tidak menggunakan parameter
+        }
+
+        // Arrow Function sebagai parameter
+
+        function giveMeName (callback) {
+            callback("Curry")
+        }
+
+        giveMeName( (name)  => console.log(`Hai ${name}`))
+    </script>
+</body>
+</html>

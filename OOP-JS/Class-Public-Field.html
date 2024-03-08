@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Public Field</title>
+</head>
+<body>
+    <script>
+
+        class Pelanggan {
+            firstName;  // mendeklarasikan properti langsung pada Class tanpa perlu menempatkannya di dalam constructor atau metode lainnya. Disebut Public class field
+            lastName;
+            saldo = 10
+
+            constructor (firstName, lastName) {
+                this.firstName = firstName // kita juga bisa merubah value public field via constructor
+                this.lastName = lastName
+            }
+
+            contohMetod () {
+
+            }
+        }
+
+        const kevin = new Pelanggan("james", "harden")
+        console.log(kevin.firstName)
+
+    </script>
+</body>
+</html>

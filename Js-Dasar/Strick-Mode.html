@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRICK MODE</title>
+</head>
+<body>
+    <script>
+        
+        // Jika tidak pakai street mode, "with statement masih bisa dipakai"
+        function tanpaStreetMode (){
+            const person = {
+                nama: "Kevin Dev"
+            }
+
+            with (person) { // ini tidka eeror, karena tidak pakai strict mode
+                console.log(nama)
+            }
+        }
+
+        tanpaStreetMode()
+
+        function pakaiStreetMode (){
+            "use strict" // Jika pakai strick ada beberapa command yang tidak dibolehkan dipakai, contohnya "with statement". jadi jika pakai strick, kode langsung berhenti
+            const person = {
+                namaGw: "Kevin ganteng"
+            }
+
+            with (person) {
+                console.log(namaGw)
+            }
+        }
+
+        pakaiStreetMode()
+
+        // Jika di file .js langsung tulis strick mode di baris 1
+    </script>
+</body>
+</html>

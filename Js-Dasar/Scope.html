@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <script>
+
+        // Global Scope     
+        let angka = 0 
+
+        // Global Scope
+        function test1 () {
+            // Local Scope test1
+            angka++
+        }
+
+        // Global Scope
+        function test2 () {
+            let p = 2
+            // Local Scope test2
+        }
+        
+        test1() // Tidak Error
+        test1() // Tidak  Error
+
+        console.log(p)
+        
+        // CONTOH LAIN
+
+        function first () {
+            // Local Scope First
+            let firstVariable = "First"
+        }
+
+        function second () {
+            // Local Scope Second
+            let secondVariable = "Second"
+            console.log(secondVariable) // Bisa
+        }
+
+        first()
+        second()
+        
+        console.log(firstVariable) // Error
+        console.log(secondVariable) // Error
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Intanceof</title>
+</head>
+<body>
+    <script>
+
+        class Kelas1 {
+
+        }
+
+        class Kelas2 {
+
+        }
+
+        const kevin = new Kelas1
+        const eka = new Kelas2
+
+        console.log(typeof kevin)
+        console.log(typeof eka)
+
+        console.log(kevin instanceof Kelas1) // output : true, karena kevin bagian dari class 'Kelas1'
+        console.log(kevin instanceof Kelas2) // outpur : flase, karena kevin bukan bagian dari class 'kelas1'
+
+    </script>
+</body>
+</html>

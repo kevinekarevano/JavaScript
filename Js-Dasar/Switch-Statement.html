@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statement</title>
+</head>
+<body>
+    <script>
+        const nilai ="A"
+
+        // JIKA AKAI SWITCH
+        
+        switch (nilai) {
+            case "A" :
+                document.writeln("Nilai anda bagus")
+                break
+            case "B" :
+            case "C" :
+                document.writeln("Sudah Lumayan")
+                break
+            case "D" :
+                document.writeln("Belajar lagi dek")
+                break
+            default : 
+                document.writeln("TOLOL")
+        }
+
+
+        // JIKA PAKAI IF ELSE
+
+        if (nilai === "A") {
+            document.writeln("<p>GACOOOR")
+        } else if (nilai === "B" || nilai === "C") {
+            document.writeln("<p>LUMAYAN BRO")
+        }  else if (nilai === "D") {
+            document.writeln("<p>STAY LEARN")
+        } else {
+            document.writeln("<p>STUPID")
+        }
+                
+    </script>
+</body>
+</html>

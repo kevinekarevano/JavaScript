@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number
+    </title>
+</head>
+<body>
+    <script>
+
+        const input = "12345" // ini string
+        const number = Number(input) // cara merubah string ke number
+
+        console.log(typeof input)
+        console.log(typeof number)
+
+        console.log(Number("ini tulisan")) // output : NaN
+
+        console.log(Number.MAX_VALUE)// max value
+        console.log(Number.MIN_VALUE)// min value
+        console.log(Number.MAX_SAFE_INTEGER) // max safe
+        console.log(Number.MIN_SAFE_INTEGER) // min safe
+        console.log(Number.NaN) // nan
+
+
+        const data = Number("12345")
+        console.log(Number.isInteger(data))// true
+        console.log(Number.isNaN(data))//false
+
+
+        const value = Number("12345")
+        console.log(value.toString(2)) // merubah ke format bil. biner
+        console.log(value.toLocaleString("id-ID")) // merubah ke formmah bahasa indonesia
+        console.log(value.toLocaleString("en-US")) // merubah ke formmah bahasa english usa
+    </script>
+</body>
+</html>

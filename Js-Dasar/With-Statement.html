@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        const profil = {
+            nama : "Kevin",
+            alamat : "Amerika",
+            umur : 17
+        }
+
+        // Jika tidak pakai scope, kita harus mengetik nama object terlebih dahulu
+        document.writeln(`<p>${profil.nama}`)
+        document.writeln(`<p>${profil.alamat}`)
+        document.writeln(`<p>${profil.umur}`)
+
+
+        // Ketika pakai scope "with" kita tidak perlu mengetikan nama object
+        with (profil) {
+            document.writeln(`<p>${nama}`)
+            document.writeln(`<p>${alamat}`)
+            document.writeln(`<p>${umur}`)
+        }
+
+    </script>
+</body>
+</html>

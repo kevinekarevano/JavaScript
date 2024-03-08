@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Method</title>
+</head>
+<body>
+    
+<script>
+
+// Kita bisa menambahkan function kedalam sebuat object (karena function dianggap sebagai tipe data)
+const person = {
+    nama : "Kevin",
+    sayHello : function  (nama) {
+        alert(`Hello ${nama}`)
+    }
+}
+
+person.sayHello("kevon")
+
+
+// Atau seperti ini. Kita bisa memasukkan function yang ada di global scope ke dalam properties yang ada di object :)
+
+function sayHello1 (name) {
+    document.writeln(`Hai ${name}`)
+}
+
+const person1 = {
+    name : "kevin",
+    sayHello1 : sayHello1
+}
+
+person1.sayHello1("kepon")
+
+// Jika kita ingin menambahkan properties ke dalam object yag sudah di buat
+
+const person3 = {
+    
+}
+
+person3.sayHello3 = function (namaKamu) {
+    document.writeln(`<p> woi ${namaKamu}`)
+}
+
+
+person3.sayHello3("james")
+</script>
+
+</body>
+</html>

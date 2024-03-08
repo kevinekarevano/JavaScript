@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Super Method</title>
+</head>
+<body>
+    <script>
+
+        class Shape {
+            paint1() {
+                console.log("Paint Shape")
+            }
+        }
+
+        class Lingkaran extends Shape {
+            paint2() {
+                super.paint1() // seperti memanggil method di parent nya, dimana parent nya yaitu "class shape"
+                console.log("Paint Lingkaran")
+            }
+        }
+
+        const circle = new Lingkaran
+        circle.paint2()
+
+    </script>
+</body>
+</html>

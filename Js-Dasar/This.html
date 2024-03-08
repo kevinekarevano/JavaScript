@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata Kunci This</title>
+</head>
+<body>
+    <script>
+
+        document.writeln(this) //Object window
+        console.log(this) //Window
+
+        function contoh () {
+            console.log(this) // di dalam Function "window"
+
+            function contoh2 () {
+                console.log(this) // di inner juga window
+            }
+
+            contoh2()
+        }
+
+        contoh()
+
+        const person = {
+            name : "james",
+            sayHello : function (value)  {
+                console.log(`Hello ${value}, My Name is ${this.name}`) // Jika di "This" di object method maka, dia menjadi si object pemilik function nya yaitu "person"
+            }
+        }
+
+        person.sayHello("Kevin")
+
+
+        // Jika Pakai ARROW FUNCTION di dalam object method, maha this menjadi window
+        const person1 = {
+            name : "harden",
+            sayHello : (value) =>  {
+                console.log(this) // Menjadi "window" bukan "person"
+                console.log(`Hello ${value}, My Name is ${this.name}`) // ini tidak bisa
+            }
+        }
+
+        person1.sayHello("kevin")
+    </script>
+</body>
+</html>

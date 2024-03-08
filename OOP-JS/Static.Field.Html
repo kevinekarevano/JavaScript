@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Field</title>
+</head>
+<body>
+    <script>
+
+        class dataBuku {
+            static judul = "heri poter" // jika ditambahkan "static", propertinya hanya dimiliki oleh clas dataBuku saja, tidak dimiliki oleh object "heri"
+            static version = 2.3
+            static pernulis = "Kevin sama"
+        }
+
+        const heri = new dataBuku
+        console.log(heri)
+
+
+        dataBuku.pernulis = "kagaya" // kita juga bisa mengubah value properti nya
+        console.log(dataBuku.version) // jika ingin mengakses properti static
+        console.log(dataBuku.pernulis)
+        console.log(dataBuku.judul) 
+
+    </script>
+</body>
+</html>

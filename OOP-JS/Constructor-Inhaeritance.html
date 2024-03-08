@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Inheritance</title>
+</head>
+<body>
+    <script>
+
+
+        // Constructor Inheritance adalah ketika punya 1 Constructor, kita bisa mengcopy dan memakai di Constructor kedua
+        function Employee (firstName) {
+            this.firstName = firstName,
+            this.sayHello = function (name) {
+                console.info(`Hello ${name}, My Name is ${this.firstName}`)
+            }
+        }
+
+        function Manager (firstname, lastname ) {
+            this.lastname = lastname
+            Employee.call(this, firstname) // Contoh, ini saya mengcopy isi class di employee
+        }
+
+        const kevin = new Manager("Kevin", "Ekarevano")
+        console.log(kevin)
+
+    </script>
+</body>
+</html>

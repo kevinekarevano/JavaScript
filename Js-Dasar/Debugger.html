@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugger</title>
+</head>
+<body>
+    <script>
+
+        function createFullName (firstName, midName, lastName) {
+            debugger; //menambahkan debugger
+            const fullname = `${firstName} ${lastName} ${lastName}`
+            return fullname
+        }
+
+        const namaLengkap = createFullName("Kevin", "Stephen", "James")
+        console.log(namaLengkap)
+
+    </script>
+</body>
+</html>

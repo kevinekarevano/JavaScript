@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Default Parameter</title>
+</head>
+<body>
+    <script>
+
+
+        // Default parameter di dalam function yaitu "Undefined", tapi kita bisa merubah default parameter menjadi apapun dengan memakai sama dengan.
+        
+        function regist (nama, gender = "UNKNOWN") {
+            document.writeln(`<p>${nama} ${gender}`)
+        }
+
+
+        regist()
+        regist("Kevin")
+        regist("Kevin", "Ekarevano")
+        regist("Kevin", undefined)
+        regist("Kevin", null)
+
+    </script>
+</body>
+</html>

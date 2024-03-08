@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Private Method</title>
+</head>
+<body>
+    <script>
+
+        class Testing {
+            tidakPrivate (nama) {
+                console.log(`hello ${nama}`)
+            }
+
+            #private1 (nama1) {
+                console.log(`hai ${nama1}`)
+            }
+            
+            #private2 (nama2) {
+                console.log(`ha1 ${nama2}`)
+            }
+
+
+        }
+
+        const kevin = new Testing()
+        console.log(kevin.tidakPrivate("James")) // tidak error karena bukan private
+        console.log(kevin.#private1("James")) // akan error kaarena private
+
+
+    </script>
+</body>
+</html>

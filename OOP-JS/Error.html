@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+</head>
+<body>
+    <script>
+
+        function mtk (angka) {
+
+            if (angka === undefined || angka === 0 ) {
+                throw new Error("Tolong isi angkanya") // jika kita inngin menambahkan error
+            }
+
+            for (let i = 1; i <= angka; i++) {
+                console.log(`angka ke ${i}`)
+            }
+
+        }
+
+        mtk(5)
+        mtk() // ini error
+
+    </script>
+</body>
+</html>

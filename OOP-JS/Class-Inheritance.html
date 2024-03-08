@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Inheritance</title>
+</head>
+<body>
+    <script>
+
+        class  Employee {
+        
+            sayHello (name){
+                console.log(`Hello ${name}, my name is Employee ${this.nama}`)
+            }
+        }            
+
+        class Manager extends Employee { // artinya class employee mewariskan prototype nya ke class manager. jadi jika misalkan sayhello dihapuss, dia akan mencari ke prototype milik si employee
+        
+            // sayHello (name){
+            //     console.log(`Hello ${name}, my name is Manager ${this.nama}`)
+            // }
+        }      
+
+        const Curry = new Employee()
+        Curry.nama = "Curry"
+        Curry.sayHello("Kevin")
+
+        const Kevin = new Manager()
+        Kevin.nama = "Kevin"
+        Kevin.sayHello("Curry")
+
+        console.log(Curry)
+        console.log(Kevin)
+
+    </script>
+</body>
+</html>

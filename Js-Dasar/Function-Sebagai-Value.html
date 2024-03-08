@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FunctioN Sebagai Value</title>
+</head>
+<body>
+    <script>
+
+        function sayHello (namaKamu){
+            document.writeln(`<p>Hello ${namaKamu}`)
+        }
+
+        let say = sayHello // Memasukkan Function ke varabel
+        
+        say("Kevin") //jadi kita dapat menggunakan function dengan memanggil variabel lalu input parameternya
+
+        sayHello("James") // sama aja seperti ini
+
+
+
+        // jika sebuah function dimasukkan ke dalam parameter sebuah function juga :)
+
+        function giveMeName (callback) {
+            callback("Curry")
+        }
+
+        giveMeName(say) 
+        giveMeName(sayHello)
+
+        
+
+    </script>
+</body>
+</html>

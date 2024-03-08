@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+
+        // Membuat constructor Function, huruf awal nama function harus kapital "ContohNih"
+
+        function ContohSatu () { // di sebut juga ini "class"
+            this.firstName = "",
+            this.lastName = "",
+            this.sayHello = function (nama) { // Jika kita menambahkan methode kedalam Contruction Function
+                console.log(`Hello ${nama}, My name is ${this.firstName}`)
+            }
+            this.siapaKamu = function () { // Isi function nya bebas
+                const test = console.log(`nama saya ${this.firstName}`)
+                return test
+            }
+        }
+
+        const kevin = new ContohSatu() // Seakan - akan, kita membuat object dari function diatas
+        kevin.firstName = "Kevin" // Merubah value properti
+        kevin.sayHello("Virtunix")
+        kevin.siapaKamu()
+        
+        const james = new ContohSatu()
+        james.firstName = "James"
+        james.lastName = "Harden"
+        james.sayHello("Helo PHP")
+        
+
+        console.log(kevin)
+        console.log(james)
+
+        const test = {} // ini tuh jika cara biasa membuat object, kalau diatas membuat object dengan class
+
+
+
+        function ContohDua (firstName, lastName) { // Jika menambahkan parameter, kita juga bisa
+            this.firstName = firstName
+            this.lastName = lastName
+        }
+
+        const irving = new ContohDua("Kyrie", "Irving") // sehingga lebih simple
+        console.log(irving)
+    </script>
+</body>
+</html>
