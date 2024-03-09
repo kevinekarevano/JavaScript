@@ -41,7 +41,87 @@
             console.log(antrianQueue.shift())
             console.log(antrianQueue.shift())
 
+
             
+        }
+        
+        
+        
+        {
+            // Array Stack atau tumpukan kartu
+            const antrianQueue = []
+            
+            
+            // seperti sistem antrian
+            antrianQueue.push("Kd") // menambakan data ke paling belakang
+            antrianQueue.push("Kd2")
+            antrianQueue.push("Kd3")
+
+            console.table(antrianQueue)
+
+            console.log(antrianQueue.pop()) // megambil data dan menghapus data paling BELAKANG
+            console.log(antrianQueue.pop())
+            console.log(antrianQueue.pop())
+            console.log(antrianQueue.pop())
+
+        }
+
+
+        {
+            // Array Search
+
+            const angka = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5,10]
+
+
+            console.info(angka.find(value => value == 4)) // apakah ada value 4 di array "angka"
+            console.info(angka.findIndex(value => value == 4)) // berapa index dari value "4"
+            console.info(angka.includes(10)) // True, karena dia menccari apakah ada angka 10, dan ada
+            console.info(angka.indexOf(5)) // berapa index dari value "5" yang pertama
+            console.info(angka.lastIndexOf(5)) // berapa index dari value "5" yang kedua
+
+        }
+
+
+        {
+            // Array Filter 
+
+            const number = [1,2,3,4,5,6,7,8,9,10]
+
+            const ganjil = number.filter(value => value % 2 === 1) // melakukan filter, hanya menampilkan value yang di module 2 sisa 1
+            const genap = number.filter(value => value % 2 === 0)
+
+            console.info(ganjil) // menampilkan array baru, yang berisi angka ganjil
+            console.info(genap) // menampilkan array baru, yang berisi angka genap
+            console.info(number) // array yang asli
+        }
+
+        
+
+        {
+            // Array Transform
+
+            const names = ["Kevin", "anjay","mabar"]
+
+            // MAP. Merubah semua value di array names menjadi uppercase
+            const namesUppercase = names.map(value => value.toUpperCase()) 
+            console.info(namesUppercase)
+            
+            // Reduce. dari kiri
+            const namesReduce = names.reduce((before, value) => before + " " + value) 
+            console.info(namesReduce)   
+             
+            // reduceRight. dari kanan
+            const nameRight = names.reduceRight((before, value) => before + " " + value)
+            console.info(nameRight)
+
+
+            // Contoh lain pemakaian reduce
+
+            const angka = [10, 10, 10, 10, 10]
+            // contoh ketika kita mau menjumlahkan
+
+            const total = angka.reduce((x, y) => x + y )
+            console.info(total)
         }
 
     </script>

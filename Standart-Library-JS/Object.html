@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+
+
+        {
+            // Freeze 
+            const namaGw = {
+                firstName : 'kevin',
+                lastName : 'Ekarevano'
+            }
+
+            Object.freeze(namaGw)
+
+            namaGw.firstName = 'Anjay' // Value properties tidak bisa diubah
+            namaGw.middleName = 'wow' // tidak bisa menambahkan properties
+            delete namaGw.lastName // tidak bisa menhapus properties
+            
+            console.info(namaGw)
+        }
+
+
+        {
+            // Seal
+            const namaGw = {
+                firstName : 'kevin',
+                lastName : 'Ekarevano'
+            }
+
+            Object.seal(namaGw)
+
+            namaGw.firstName = 'Anjay' // BISA merubah properties
+            namaGw.middleName = 'wow' // tidak bisa menambahkan properties
+            delete namaGw.lastName // tidak bisa menghapus properties
+            
+            console.info(namaGw)
+        }
+
+
+        {
+            // Object Assign (seperti meng copy paste)
+
+            const data1 = {
+                nama: 'kevin'
+            }
+
+            const data2 = {
+                tambahan1: 1,
+                tambahan2: 2,
+                tambahan3: 3
+            }
+
+            Object.assign(data1, data2) // Mengcopy properties dari object "data2"
+            console.info(data1) // sekarang object data1 memiliki properties dari data2
+            console.info(data2)
+        }
+
+
+        {
+            // Object property Value & getOwnPropertyNames
+
+            const person = {
+                firstName: 'kevin',
+                lastName: 'eka'
+            }
+
+            console.info(Object.values(person)) // Mengambil value dari properties
+            console.info(Object.getOwnPropertyNames(person)) // Mengambil Property nya saja
+        }
+    
+    </script>
+</body>
+</html>

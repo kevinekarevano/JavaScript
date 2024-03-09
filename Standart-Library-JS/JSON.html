@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <script>
+
+        // JSON (JavaScript Object Notation)
+
+        const person = {
+            nama: 'kevin ekarevano',
+            umur: 16,
+            pekerjaan: ['Software Engineer', 'JavaScript Developer'],
+            alamat: {
+                negara: 'indonesia',
+                kota: 'jakarta',
+                jalan: 'jalan - jalan'
+            }
+        }
+
+        const json = JSON.stringify(person) // Merubah Object Js menjadi string JSON
+        console.log(json)
+
+        const convertJSON = JSON.parse(json) // merubah string JSON menjadi object Js
+        console.log(convertJSON)
+        
+        // merubah ke array juga bisa!
+
+    </script>
+</body>
+</html>
