@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Property</title>
+</head>
+<body>
+    <ul id="menu">
+        <li id="satu">first</li>
+        <li id="dua">second</li>
+        <li id="tiga">third</li>
+    </ul>
+
+    <script>
+
+        const menu = document.getElementById('menu')
+        console.log(menu)
+        console.log(menu.childNodes) // output : nodelist
+
+        const tiga = document.getElementById('tiga')
+        console.log(tiga.textContent) // output : "third" (berisi konnten dari li)
+    </script>
+</body>
+</html>
