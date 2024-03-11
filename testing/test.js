@@ -1,17 +1,13 @@
-let display = document.getElementById('display');
+const login = () => {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
 
-function appendToDisplay(value) {
-    display.value += value;
-}
-
-function clearDisplay() {
-    display.value = '';
-}
-
-function calculate() {
-    try {
-        display.value = eval(display.value);
-    } catch (error) {
-        display.value = 'Error';
+    if (username === "kevin" && password === "superadmin") {
+        window.location.href = "tujuan.html";
+    } else {
+        alert("Username atau password salah. Silakan coba lagi.");
     }
 }
+
+
+    
