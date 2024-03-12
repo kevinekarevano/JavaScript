@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Create</title>
+</head>
+<body>
+    <div id="content" class="konten">
+        
+    </div>
+
+    <script>    
+
+       const div = document.getElementById('content')
+
+        // create h1
+        const title = document.createElement('h1') // membuat element nya
+        title.textContent = 'ini h1' // menambahan content ke elementnya
+        div.appendChild(title) // menambahkan element sebagai child dari div ber id 'content'
+
+        // create p
+        const deskripsi = document.createElement('p')
+        deskripsi.textContent = 'ini deskripsi'
+        div.appendChild(deskripsi)
+
+
+        // membuat elemnt langsung di body
+        const hh2 = document.createElement('h2') // kita buat elementnya
+        hh2.textContent = 'ini h2' // mmengisi value element nya
+        document.body.append(hh2) // menmabahkan element yang sudah kita buat ke body
+
+    </script>
+</body>
+</html>
