@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Time Out</title>
+</head>
+<body>
+    <script>
+
+        const addElement = () => {
+            const head = document.createElement('h1')
+            head.textContent = "Kevin Dev"
+
+            document.body.appendChild(head)
+        }
+        
+        setTimeout(addElement, 5000) // async (dia akan berjalan mandiri) dia akan muncul setelah 5dtk
+        console.log('test') // program ini akan tetap jalan walaupu kode program diatasnya belum jalan, jadi dia tidak menunggu dulu
+
+    </script>
+</body>
+</html>

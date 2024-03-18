@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Interval</title>
+</head>
+<body>
+
+    <h1 id="header"></h1>
+
+    <script>
+
+        const timeOut = () => {
+            const head = document.getElementById('header')
+            head.textContent = new Date().toString()
+
+            
+        }
+        // ini merupakan callback
+        setInterval(timeOut, 1000) // secara interval, jadi dia akan dipanggil setiap 1 detik
+        console.log('test') // program ini akan tetap jalan walaupu kode program diatasnya belum jalan, jadi dia tidak menunggu dulu
+
+    </script>
+</body>
+</html>
