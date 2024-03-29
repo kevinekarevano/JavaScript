@@ -38,4 +38,5 @@ for (let i = 0; i <= 4; i++) { // pakai loop jika ingin semuanya kena
   p[i].style.background = "lightblue"
 }
 
+ const nama = 'kevin'
 
