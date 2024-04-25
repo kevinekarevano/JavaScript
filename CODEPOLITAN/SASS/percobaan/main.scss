@@ -1,0 +1,54 @@
+$satu-color: #5e9bb5;
+$dua-color: #9f5c5c;
+$tiga-color: #6cbe8a;
+$empat-color: #be6cbe;
+$fontSaya: Halvetica, sans-serif;
+
+* {
+  padding: 0;
+  margin: 0;
+
+  body {
+    font-family: $fontSaya;
+
+    .navbar {
+      background-color: $satu-color;
+    }
+
+    .header {
+      background-color: $dua-color;
+    }
+
+    .about {
+      background-color: $tiga-color;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .product {
+      background-color: $empat-color;
+
+      ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        padding: 10px;
+
+        li {
+          color: aliceblue;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .footer {
+      background-color: salmon;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

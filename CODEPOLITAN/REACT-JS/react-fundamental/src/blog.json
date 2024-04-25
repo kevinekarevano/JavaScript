@@ -1,0 +1,20 @@
+[
+  {
+    "title": "belajar NEXT JS",
+    "tags": ["javscript", "fullstack"],
+    "date": "24-4-2008",
+    "isNew" : true
+  },
+  {
+    "title": "belajar HTML",
+    "tags": ["HTML", "FrontEnd"],
+    "date": "25-12-2024",
+    "isNew": false
+  },
+  {
+    "title": "Belajar Express",
+    "tags": ["javscript", "backEnd"],
+    "date": "10-8-2008",
+    "isNew": false
+  }
+]

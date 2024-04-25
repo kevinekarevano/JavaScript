@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papan Score</title>
+</head>
+
+<body>
+    <h1>
+        <span id="player-1">0</span>
+        vs
+        <span id="player-2">0</span>
+    </h1>
+
+    <button id="player1-btn">+1</button>
+    <button id="player2-btn">+1</button>
+    <button id="reset-btn">RESET</button>
+
+    <select name="" id="option">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+    </select>
+
+
+    <script>
+        const p1Score = document.querySelector('#player-1')
+        const p2Score = document.querySelector('#player-2')
+        const p1Btn = document.querySelector('#player1-btn')
+        const p2Btn = document.querySelector('#player2-btn')
+        const resetBtn = document.querySelector('#reset-btn')
+        const winPointOption = document.querySelector('#option')
+
+        
+        let scoreP1 = 0
+        let scoreP2 = 0
+        let winPoint = 5
+        let gameOver = false
+
+        p1Btn.addEventListener('click', function () {
+
+            if (!gameOver) {
+                scoreP1 += 1
+                if (scoreP1 === winPoint) {
+                    gameOver = true
+                }
+                p1Score.textContent = scoreP1
+            }
+        })
+
+        p2Btn.addEventListener('click', function () {
+            if (!gameOver) {
+                scoreP2 += 1
+                if (scoreP2 === winPoint) {
+                    gameOver = true
+                }
+                p2Score.textContent = scoreP2
+            }
+
+        })
+
+        function reset() {
+            gameOver = false
+            scoreP1 = 0
+            scoreP2 = 0
+            p1Score.textContent = 0
+            p2Score.textContent = 0
+        }
+
+        resetBtn.addEventListener('click', reset)
+
+        winPointOption.addEventListener('change', function () {
+            winPoint = parseInt(winPointOption.value)
+            reset()
+            
+        })
+
+        
+
+
+    </script>
+</body>
+
+</html>

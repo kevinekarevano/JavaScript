@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <!-- Css jQuery Slick -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <style>
+        .bg {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1>list Kota</h1>
+    <ul>
+        <li class="BSD">Bandung</li>
+        <li class="tangerang">Tangerang</li>
+        <li>Jakarta</li>
+    </ul>
+    <button id="color">UBAH WARNA</button>
+    <button id="alert">DOUBLE CLICK AKUU!</button>
+
+
+    <div class="slider">
+        <div>konten 1</div>
+        <div>konten 2</div>
+        <div>konten 3</div>
+    </div>
+
+
+
+
+    <button class="popUp_open">Open popup</button>
+
+    <!-- Add content to the popup -->
+    <div id="popUp">
+
+        ...popup content...
+
+        <!-- Add an optional button to close the popup -->
+        <button class="popUp_close">Close</button>
+
+    </div>
+
+    <div id="kotak" style="height: 100px; width: 100px; background: crimson; color:white;">
+        fade hide
+    </div>
+    <button id="hide-btn">HIDE FADE</button>
+
+    <div id="kotak-toggle" style="height: 100px; width: 100px; background: salmon; color:black;">
+        toggle fade
+    </div>
+    <button id="toggle-btn">TOGGLE FADE</button>
+
+
+    <!-- script jQuery -->
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <!-- jQuery Slick -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- jQuery PopUp -->
+    <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.10/jquery.popupoverlay.js"></script>
+
+    <script>
+        $(document).ready(() => {
+            console.log('jQuery Ready anjay ready cuy')
+            $('.BSD').text('BSD')
+            $('h1').text('DiUbah')
+
+            $('#color').on('click', () => {
+                $("body").css('background', 'lightblue')
+            })
+            $('#color').on('click', () => {
+                $('li').toggleClass("bg")
+            })
+
+            $('#alert').on('dblclick', function () { 
+                alert('saya di klik')
+            })
+
+            $('.slider').slick()
+            $('#popUp').popup()
+
+
+            $('#hide-btn').on('click', function () {
+                $('#kotak').fadeOut(1000)
+            })
+
+            $('#toggle-btn').on('click', function () {
+                $('#kotak-toggle').fadeToggle()
+            })
+
+            $('.tangerang').on('click', function () {
+                $('.tangerang').animate({
+                    marginLeft: 50,
+                    opacity: 0.5
+                })
+            })
+
+        })
+
+    </script>
+</body>
+
+</html> =
