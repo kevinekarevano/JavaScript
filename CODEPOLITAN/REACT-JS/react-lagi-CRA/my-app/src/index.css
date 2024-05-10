@@ -1,3 +1,7 @@
+*{
+    font-family: Poppins, sans-serif;
+}
+
 .merah {
     color: crimson
 }
@@ -16,4 +20,8 @@ img{
 
 .margin-bottom{
     margin-bottom: 4rem;
+}
+
+.sold {
+    filter: grayscale(100%);
 }

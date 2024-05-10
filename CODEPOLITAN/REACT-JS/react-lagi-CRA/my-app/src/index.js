@@ -4,14 +4,14 @@ import data from "./data.js";
 import "./index.css";
 
 const Food = (props) => {
-  const { nama, harga, foto, deskripsi } = props.foodObj;
+  const { nama, harga, foto, deskripsi, stok } = props.foodObj;
   return (
     <>
       <div className="margin-bottom">
         <h1>
-          {nama} | {harga}
+          {nama} | {stok ? harga : 'Habis--'}
         </h1>
-        <img src={foto} alt={nama} />
+        <img className={!stok ? "sold" : ""} src={foto} alt={nama} />
         <p>{deskripsi}</p>
       </div>
     </>
