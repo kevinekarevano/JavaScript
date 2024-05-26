@@ -24,8 +24,6 @@ const starStyle = {
   marginLeft: "1px",
 };
 
-
-
 function Star({ onRate, full, onHoverIn, onHoverOut }) {
   return (
     <span style={starStyle} role="button" onClick={onRate} onMouseEnter={onHoverIn} onMouseLeave={onHoverOut}>
@@ -42,12 +40,14 @@ function Star({ onRate, full, onHoverIn, onHoverOut }) {
   );
 }
 
-export default function StarRating({ max }) {
+export default function StarRating({ max, onSetRating }) {
   const [startRating, setStartRating] = useState(0);
   const [tempRating, setTempRating] = useState(0);
 
-  const handleClick = (i) => {
-    setStartRating(i);
+  const handleClick = (rating) => {
+    setStartRating(rating);
+    setStartRating(rating);
+    onSetRating(rating);
   };
 
   return (

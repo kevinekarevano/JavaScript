@@ -50,4 +50,3 @@ const dataPokemon = async () => {
 };
 
 dataPokemon(); // pemanggilan function
-
