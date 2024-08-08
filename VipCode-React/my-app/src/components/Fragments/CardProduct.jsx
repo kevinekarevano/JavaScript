@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../Elements/Button";
 
 const CardProduct = ({ children }) => {
@@ -8,11 +9,11 @@ const CardProduct = ({ children }) => {
   );
 };
 
-const Header = ({ imageLink }) => {
+const Header = ({ imageLink, id }) => {
   return (
-    <a href="#">
-      <img src={imageLink} alt="product" />
-    </a>
+    <Link to={`/product/${id}`} className="">
+      <img src={imageLink} alt="product" className="w-full h-60 object-cover" />
+    </Link>
   );
 };
 
@@ -20,8 +21,8 @@ const Body = ({ children, title }) => {
   return (
     <div className="p-5  h-full">
       <a href="">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{title}</h5>
-        <p>{children}</p>
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 line-clamp-1">{title}</h5>
+        <p className="line-clamp-5">{children}</p>
       </a>
     </div>
   );

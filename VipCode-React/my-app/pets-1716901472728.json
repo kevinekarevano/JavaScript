@@ -1,0 +1,68 @@
+[
+  {
+    "color": "yellow",
+    "type": "zappy",
+    "size": "nano",
+    "name": "Speedy"
+  },
+  {
+    "color": "gray",
+    "type": "rocky",
+    "size": "nano",
+    "name": "Rock With Me"
+  },
+  {
+    "color": "gray",
+    "type": "totoro",
+    "size": "nano",
+    "name": "Oscar"
+  },
+  {
+    "color": "yellow",
+    "type": "rubber-duck",
+    "size": "nano",
+    "name": "Donald"
+  },
+  {
+    "color": "gray",
+    "type": "rocky",
+    "size": "nano",
+    "name": "Rock Out"
+  },
+  {
+    "color": "red",
+    "type": "crab",
+    "size": "nano",
+    "name": "Ruby Red"
+  },
+  {
+    "color": "green",
+    "type": "snake",
+    "size": "nano",
+    "name": "Basil"
+  },
+  {
+    "color": "red",
+    "type": "crab",
+    "size": "nano",
+    "name": "Clawdia"
+  },
+  {
+    "color": "gray",
+    "type": "totoro",
+    "size": "nano",
+    "name": "Coco"
+  },
+  {
+    "color": "gray",
+    "type": "totoro",
+    "size": "nano",
+    "name": "kevin"
+  },
+  {
+    "color": "yellow",
+    "type": "zappy",
+    "size": "nano",
+    "name": "Azula"
+  }
+]

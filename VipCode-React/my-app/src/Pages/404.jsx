@@ -1,6 +1,6 @@
 import { useRouteError } from "react-router-dom";
 
-const ErrorPage = () => {
+const   ErrorPage = () => {
   const error = useRouteError();
   return (
     <div className="bg-zinc-800 min-h-screen flex flex-col gap-2 justify-center items-center">
